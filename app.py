@@ -234,6 +234,7 @@ def get_rag_chain(vectorstore):
             google_api_key=api_key,
             temperature=0.1,
             max_output_tokens=2048
+            convert_system_message_to_human=True
         )
 
         system_prompt = """You are a helpful AI assistant. Answer based STRICTLY on the provided context.
@@ -400,3 +401,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
