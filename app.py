@@ -233,7 +233,7 @@ def get_rag_chain(vectorstore):
             model="gemini-3-flash-preview",  # Safe model name
             google_api_key=api_key,
             temperature=0.1,
-            max_output_tokens=2048
+            max_output_tokens=2048,
             convert_system_message_to_human=True
         )
 
@@ -401,4 +401,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
