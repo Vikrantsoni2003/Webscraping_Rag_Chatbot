@@ -1,0 +1,38 @@
+STEPS TO RUN THE PROJECT
+========================
+
+1. INSTALL PYTHON
+   Ensure you have Python installed (version 3.9 or higher).
+
+2. OPEN TERMINAL
+   Open Command Prompt (cmd) or PowerShell and navigate to the project folder:
+   cd c:\Users\hp\Downloads\humanli_ai_task
+
+3. INSTALL DEPENDENCIES
+   Run this command to install the required libraries:
+   pip install -r requirements.txt
+
+4. SETUP API KEY
+   Make sure you have your Google Gemini API Key.
+   It is already configured in the .env file and .streamlit/secrets.toml file properly.
+   
+   If you need to change it, editing .env is sufficient:
+   GOOGLE_API_KEY=your_api_key_here
+
+5. RUN THE APP
+   Run the following command to start the Chatbot:
+   streamlit run app.py
+
+   (If 'streamlit' is not recognized, try: python -m streamlit run app.py)
+
+6. USE THE APP
+   - The browser will open automatically at http://localhost:8501
+   - Enter a website URL (e.g., https://example.com)
+   - Click "Process URL"
+   - Wait for "Content processed!" message
+   - Ask your questions in the chat box
+
+TROUBLESHOOTING
+- If you see "StreamlitSecretNotFoundError", don't worry, the app now handles this by checking .env too.
+- If you see "404 models not found", it means the specific Gemini model isn't active for your key. We have set it to 'gemini-3-Flash-preview' which works.
+- To restart, press Ctrl+C in the terminal to stop, then run the command again.
